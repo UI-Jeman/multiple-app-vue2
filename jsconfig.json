@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es2015",
+    "paths": {
+      "@pc/*": ["./src/web/pc/*"],
+      "@app/*": ["./src/web/app/*"]
+    },
+    "checkJs": false
+  },
+  "include": ["./src/web/pc", "./src/web/app"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" href="<%= htmlWebpackPlugin.options.publicPath %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      html, body {
+        margin: 0px;
+      }
+
+      .page-cartoon {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .page-cartoon_circle {
+        width: 35px;
+        height: 35px;
+        background-color: #0186fd;
+        border-radius: 50%;
+        transform-origin: 50% 50%;
+        animation: circle-scale 1.2s linear infinite alternate both;
+      }
+
+      @keyframes circle-scale {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(.3);
+        }
+      }
+    </style>
+    <% _.forEach(htmlWebpackPlugin.options.css, item => { %>
+      <link rel="stylesheet" href="<%= item %>"></script>
+    <% }) %>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2436712_akuog7vf2mu.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <!-- 页面动画 start -->
+      <div class="page-cartoon">
+        <span class="page-cartoon_circle"></span>
+      </div>
+      <!-- 页面动画 end -->
+    </div>
+    <% _.forEach(htmlWebpackPlugin.options.js, item => { %>
+    <script src="<%= item %>"></script>
+    <% }) %>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

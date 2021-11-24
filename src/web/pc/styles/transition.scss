@@ -1,0 +1,16 @@
+.slide-enter-active, .slide-leave-active {
+  transform-origin: 50% 0;
+  transition: transform .7s ease-out;
+}
+
+.slide-enter, .slide-leave-to {
+  transform: scaleY(0);
+}
+
+.translate-horizontal-enter-active, .translate-horizontal-leave-active {
+  transition: transform .7s ease-out;
+}
+
+.translate-horizontal-enter, .translate-horizontal-leave-to {
+  transform: translateX(-100%);
+}

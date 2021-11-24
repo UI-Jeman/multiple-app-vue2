@@ -1,0 +1,61 @@
+:root {
+}
+
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+fieldset,
+legend {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+img,
+fieldset {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+input,
+a {
+  outline: none;
+}
+
+// 卡片式容器
+.card-container {
+  margin: 28px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+// 去除上边框
+.margin-notop {
+  margin-top: 0;
+}
